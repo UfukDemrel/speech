@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'SF Pro Display', sans-serif;                                            
+}
+
+.floating:hover {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 1.0s;
+  -webkit-animation-duration: 1.0s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+body.light{
+  background-image: linear-gradient(to right, #f8e2c6, #fee5e0, #dffff4); 
+  color: black;
+}
+
+body.dark{
+  background-image: linear-gradient(to right, #464234, #2a3229, #393b3a); 
+  color: white;
+}
+
+body.light .background{
+  background: rgba(255, 255, 255, 0.436);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: black;
+}
+
+body.dark .background{
+  background: rgba(255, 255, 255, 0.693);
+  box-shadow: rgba(192, 192, 192, 0.24) 0px 3px 8px;
+  color: black;
+}
